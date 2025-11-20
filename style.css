@@ -1,0 +1,206 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #35373a, #ffffff, #35373a);
+  color: #000000;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(120deg, #0066ff, #00c6ff);
+  color: white;
+  padding: 30px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.intro {
+  margin: 60px auto;
+  width: 85%;
+  max-width: 900px;
+  background: linear-gradient(145deg, #ffffff, #f4f9ff);
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  animation: fadeIn 1s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.intro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0,150,255,0.25);
+}
+
+.intro h2 {
+  font-size: 2.2em;
+  background: linear-gradient(90deg, #0078ff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.intro-text p {
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #333;
+  animation: fadeInUp 0.8s ease both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.robots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 60px 0;
+}
+
+.robot-container {
+  background: linear-gradient(145deg, #ffffff, #e9f3ff);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 850px;
+  padding: 25px;
+  transition: all 0.4s ease;
+}
+.robot-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 120, 255, 0.2);
+}
+
+.robot-container img {
+  width: 100%;
+  height: 350px;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.tab {
+  background: linear-gradient(90deg, #0078ff, #00c6ff);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.tab:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.6);
+}
+.tab.active {
+  background: linear-gradient(90deg, #00c6ff, #009eff);
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.7);
+}
+
+.tab-content {
+  font-weight: bold;
+  background: #f9fcff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.05);
+  transition: 0.4s;
+  line-height: 1.6;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  margin-top: 60px;
+  padding: 25px;
+  background: linear-gradient(120deg, #004aad, #00c6ff);
+  color: white;
+  font-weight: 300;
+}
+
+/* === Анімація появи при прокрутці === */
+.robot-container {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.robot-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Додаткова м’якість ефекту */
+.robot-container:nth-child(odd) {
+  transition-delay: 0.1s;
+}
+.robot-container:nth-child(even) {
+  transition-delay: 0.25s;
+}
+
+.robot-container:focus-within {
+  box-shadow: 0 0 30px rgba(0, 180, 255, 0.4);
+  transform: scale(1.03);
+}
+
+.tab-content ul {
+  text-align: center;
+  margin: 15px auto;
+  padding-left: 25px;
+  line-height: 1.6;
+  font-size: 1.05em;
+  color: #000000;
+  list-style-type: none; /* прибираємо стандартні кружечки */
+}
+
+.tab-content ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 25px;
+}
+
+footer {
+  margin-top: 40px;
+  background: linear-gradient(120deg,#00c6ff, #0066ff);
+  padding: 25px 0;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.footer-menu a {
+  color: #dcdcdc;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.footer-menu a:hover {
+  color: #00c7ff;
+  transform: scale(1.15);
+  text-shadow: 0 0 10px #00c7ff;
+}
+
